@@ -147,7 +147,7 @@ class FullWidthCompoundButton extends LinearLayout {
                 params.gravity = Gravity.START ;
                 textView.setLayoutParams(params);
                 textView.setGravity(Gravity.CENTER_VERTICAL);
-                textView.setPadding(0,10,0,0);
+                textView.setPadding(20,10,0,0);
                 addView(textView);
                 addView(button);
                 break;
@@ -160,7 +160,7 @@ class FullWidthCompoundButton extends LinearLayout {
                 paramss.gravity = Gravity.START;
                 textView.setLayoutParams(paramss);
                 textView.setGravity(Gravity.CENTER_VERTICAL);
-                textView.setPadding(0,10,0,0);
+                textView.setPadding(20,10,0,0);
                 addView(textView);
                 break;
         }
