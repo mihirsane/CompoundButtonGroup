@@ -67,7 +67,7 @@ class FullWidthCompoundButton extends LinearLayout {
 
         setClickable(true);
         setOrientation(HORIZONTAL);
-        setPadding(20, 32, 20, 32);
+//        setPadding(20, 32, 20, 32);
 
         textView = new TextView(context);
 
@@ -142,10 +142,12 @@ class FullWidthCompoundButton extends LinearLayout {
             case BEFORE:
                 LinearLayout.LayoutParams params = new LayoutParams(
                         LayoutParams.MATCH_PARENT,
-                        LayoutParams.MATCH_PARENT);
+                        LayoutParams.WRAP_CONTENT   );
                 params.weight = 1.0f;
+                params.gravity = Gravity.START ;
                 textView.setLayoutParams(params);
                 textView.setGravity(Gravity.CENTER_VERTICAL);
+                textView.setPadding(0,10,0,0);
                 addView(textView);
                 addView(button);
                 break;
@@ -155,7 +157,10 @@ class FullWidthCompoundButton extends LinearLayout {
                 LinearLayout.LayoutParams paramss = new LayoutParams(
                         LayoutParams.WRAP_CONTENT,
                         LayoutParams.WRAP_CONTENT);
+                paramss.gravity = Gravity.START;
                 textView.setLayoutParams(paramss);
+                textView.setGravity(Gravity.CENTER_VERTICAL);
+                textView.setPadding(0,10,0,0);
                 addView(textView);
                 break;
         }
